@@ -1,0 +1,124 @@
+/* book_request.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f7fafc;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 480px;
+  width: 90%;
+  margin: 3rem auto 4rem;
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+label {
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1rem;
+  user-select: none;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  background-color: #1abc9c;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(26, 188, 156, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #16a085;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* Responsive tweak */
+@media (max-width: 400px) {
+  main {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+}

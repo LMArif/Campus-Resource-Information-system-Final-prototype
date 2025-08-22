@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Request Form - Library Services</title>
+  <link rel="stylesheet" href="book_request.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Library Services - Book Request Form</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="">-- Select User --</option>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <form class="form-container" id="requestForm">
+      <label for="studentName">Your Name:</label>
+      <input type="text" id="studentName" name="studentName" required />
+
+      <label for="studentId">Student ID:</label>
+      <input type="text" id="studentId" name="studentId" required />
+
+      <label for="bookTitle">Book Title:</label>
+      <input type="text" id="bookTitle" name="bookTitle" required />
+
+      <label for="author">Author Name:</label>
+      <input type="text" id="author" name="author" required />
+
+      <label for="publisher">Publisher (optional):</label>
+      <input type="text" id="publisher" name="publisher" />
+
+      <label for="reason">Why do you want this book?</label>
+      <textarea id="reason" name="reason" rows="4" placeholder="Explain why this book should be added." required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Campus Resource Information System | Library Services
+  </footer>
+
+  <script src="book_request.js"></script>
+</body>
+</html>

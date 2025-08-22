@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>View Request Status - Library Services</title>
+  <link rel="stylesheet" href="request_status.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    .status.approved { color: green; font-weight: bold; }
+    .status.pending { color: orange; font-weight: bold; }
+    .status.rejected { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Library Services - View Request Status</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian" selected>Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="status-container" id="statusSection">
+      <h2>All Book Requests</h2>
+      <table id="statusTable">
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Book Title</th>
+            <th>Requester</th>
+            <th>Date Submitted</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic content will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Campus Resource Information System | Library Services
+  </footer>
+
+  <script src="request_status.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Catalog - Library Services</title>
+  <link rel="stylesheet" href="library_catalog.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .add-book-form {
+      display: none;
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .add-book-form input {
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .btn {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-request {
+      color: green;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn-disabled {
+      color: gray;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Library Services - Library Catalog</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="">-- Select User --</option>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-container">
+      <h2>Available Books</h2>
+
+      <!-- Add Book Form (Only Librarian Can See) -->
+      <div class="add-book-form" id="addBookForm">
+        <h3>Add New Book</h3>
+        <input type="text" id="bookTitle" placeholder="Book Title" required>
+        <input type="text" id="bookAuthor" placeholder="Author" required>
+        <input type="text" id="bookGenre" placeholder="Genre" required>
+        <button class="btn" id="addBookBtn">Add Book</button>
+      </div>
+
+      <input type="text" id="searchInput" placeholder="Search by title or author..." />
+      <table id="booksTable">
+        <thead>
+          <tr>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Availability</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Introduction to Algorithms</td>
+            <td>Thomas H. Cormen</td>
+            <td>Computer Science</td>
+            <td>Available</td>
+            <td><a href="book_request.html?title=Introduction+to+Algorithms" class="btn-request role-request">Request</a></td>
+          </tr>
+          <tr>
+            <td>Clean Code</td>
+            <td>Robert C. Martin</td>
+            <td>Software Engineering</td>
+            <td>Checked Out</td>
+            <td><span class="btn-disabled">Unavailable</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Campus Resource Information System | Library Services
+  </footer>
+
+  <!-- Link external JS -->
+  <script src="library_catalog.js"></script>
+</body>
+</html>

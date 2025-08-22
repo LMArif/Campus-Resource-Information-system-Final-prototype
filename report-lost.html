@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Lost Item</title>
+  <link rel="stylesheet" href="report-lost.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Report Lost Item</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="student" selected>Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <form class="lost-form" id="lostForm">
+      <label for="item-name">Item Name:</label>
+      <input type="text" id="item-name" name="item-name" required>
+
+      <label for="lost-date">Date Lost:</label>
+      <input type="date" id="lost-date" name="lost-date" required>
+
+      <label for="lost-location">Location:</label>
+      <input type="text" id="lost-location" name="lost-location" required>
+
+      <label for="description">Item Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="contact">Your Contact Info:</label>
+      <input type="email" id="contact" name="contact" placeholder="you@example.com" required>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Campus Resource Information System | Lost & Found
+  </footer>
+
+  <script src="report-lost.js"></script>
+</body>
+</html>
+

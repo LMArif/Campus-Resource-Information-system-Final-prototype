@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fbfd;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #dc3545;
+    margin-bottom: 30px;
+  }
+  
+  .lost-form {
+    background-color: white;
+    border: 2px solid #dc3545;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .lost-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .lost-form input,
+  .lost-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .lost-form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .lost-form button:hover {
+    background-color: #c82333;
+  }
+  

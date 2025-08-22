@@ -1,0 +1,98 @@
+/* support-services.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  color: #2c3e50;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  user-select: none;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #64707d;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  user-select: none;
+}
+
+.support-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.support-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  padding: 1.8rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.support-card:hover,
+.support-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.support-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #1abc9c;
+  user-select: none;
+}
+
+.support-card p {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  user-select: text;
+}
+
+.support-card strong {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .support-card {
+    padding: 1.4rem 1rem;
+  }
+}

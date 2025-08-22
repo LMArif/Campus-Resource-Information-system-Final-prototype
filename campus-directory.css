@@ -1,0 +1,101 @@
+/* campus-directory.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f0f4f8;
+  color: #34495e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  user-select: none;
+  color: #2c3e50;
+  letter-spacing: 1.1px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.intro {
+  font-size: 1.15rem;
+  color: #627d98;
+  margin-bottom: 2.5rem;
+  user-select: none;
+}
+
+.sub-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sub-link {
+  display: block;
+  background-color: #3498db;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.sub-link:hover,
+.sub-link:focus {
+  background-color: #2980b9;
+  box-shadow: 0 10px 25px rgba(41, 128, 185, 0.5);
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.sub-link:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(41, 128, 185, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .sub-link {
+    font-size: 1.1rem;
+    padding: 0.85rem 1.5rem;
+  }
+}

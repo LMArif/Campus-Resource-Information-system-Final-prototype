@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Services - Campus Resource Information System</title>
+  <link rel="stylesheet" href="library_services.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Campus Resource Information System</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="">-- Select User --</option>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <h2>Library Services</h2>
+    <div class="services-list">
+      <a href="library_catalog.html" class="service-card" title="Browse available books in the library">
+        <div class="service-icon">📚</div>
+        <div>Library Catalog</div>
+      </a>
+
+      <a href="book_request.html" class="service-card" title="Request a new book">
+        <div class="service-icon">📖</div>
+        <div>Book Request Form</div>
+      </a>
+
+      <a href="book_renewal.html" class="service-card" title="Renew your borrowed books">
+        <div class="service-icon">🔁</div>
+        <div>Book Renewal Request</div>
+      </a>
+    
+      <!-- Librarian-only -->
+      <a href="request_status.html" id="requestStatusCard" class="service-card" title="Track your requests status">
+        <div class="service-icon">📂</div>
+        <div>View Request Status</div>
+      </a>
+
+      <a href="library_rules.html" class="service-card" title="Library rules and guidelines">
+        <div class="service-icon">📜</div>
+        <div>Library Rules & Guidelines</div>
+      </a>
+
+      <a href="digital_library.html" class="service-card" title="Access digital library resources">
+        <div class="service-icon">🗂️</div>
+        <div>Digital Library Access</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Campus Resource Information System | Library Services
+  </footer>
+
+  <!-- External JS -->
+  <script src="library_services.js"></script>
+</body>
+</html>
+

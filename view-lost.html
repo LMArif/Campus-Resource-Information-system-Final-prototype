@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Lost Items</title>
+  <link rel="stylesheet" href="view-lost.css">
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+    .item-list {
+      margin-top: 20px;
+    }
+    .item-card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 12px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lost Items</h1>
+  <div class="user-select">
+    <label for="user-type" class="sr-only">Select User</label>
+    <select id="user-type" name="user-type">
+      <option value="student">Student</option>
+      <option value="faculty">Faculty</option>
+      <option value="librarian" selected>Librarian</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <div class="item-list" id="lostItemsList">
+    <!-- Lost items will be dynamically populated here -->
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Campus Resource Information System | Lost & Found
+</footer>
+
+<script src="view-lost.js"></script>
+</body>
+</html>

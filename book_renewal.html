@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Renewal Request - Library Services</title>
+  <link rel="stylesheet" href="book_renewal.css" />
+  <style>
+    .user-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .user-select select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Library Services - Book Renewal Request</h1>
+    <div class="user-select">
+      <label for="user-type" class="sr-only">Select User</label>
+      <select id="user-type" name="user-type">
+        <option value="student" selected>Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <form class="form-container" id="renewalForm">
+      <label for="studentName">Student Name:</label>
+      <input type="text" id="studentName" name="studentName" required />
+
+      <label for="studentId">Student ID:</label>
+      <input type="text" id="studentId" name="studentId" required />
+
+      <label for="bookTitle">Book Title:</label>
+      <input type="text" id="bookTitle" name="bookTitle" required />
+
+      <label for="dueDate">Current Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate" required />
+
+      <label for="reason">Reason for Renewal:</label>
+      <textarea id="reason" name="reason" rows="3" placeholder="Optional"></textarea>
+
+      <button type="submit">Submit Renewal Request</button>
+    </form>
+  </main>
+
+  <footer>

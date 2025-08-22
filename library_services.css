@@ -1,0 +1,131 @@
+/* library_services.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+header {
+  background: #34495e;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(52,73,94,0.4);
+  color: #ecf0f1;
+  user-select: none;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+main {
+  flex-grow: 1;
+  max-width: 1080px;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #34495e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card {
+  background: #f7f9fc;
+  border-radius: 20px;
+  box-shadow:
+    8px 8px 15px #bec8d2,
+    -8px -8px 15px #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: #34495e;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.service-card:hover,
+.service-card:focus {
+  box-shadow:
+    inset 4px 4px 10px #bec8d2,
+    inset -4px -4px 10px #ffffff;
+  transform: translateY(-8px) scale(1.05);
+  color: #1abc9c;
+  background: #e0f7f5;
+}
+
+.service-icon {
+  font-size: 4.5rem;
+  margin-bottom: 1.2rem;
+  user-select: none;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.05));
+}
+
+.service-card div:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+footer {
+  background: #34495e;
+  color: #ecf0f1;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 -3px 12px rgba(52,73,94,0.4);
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-card {
+    padding: 2rem 1rem;
+  }
+
+  .service-icon {
+    font-size: 3.5rem;
+  }
+
+  .service-card div:last-child {
+    font-size: 1rem;
+  }
+}
